@@ -4,20 +4,44 @@
     <title>birthday</title>
     <meta charset="UTF-8" />
     <script src="stock.js"></script>
+    <style>
+      .container{
+  width: 50%;
+  border: 1px solid black;
+  height: 55vh;
+  margin: 15vh auto;
+  padding-top: 70px;
+  text-align: center;
+  background-color: 
+#6EE7B7;
+}
+
+input{
+  margin-left: 28px;
+  margin-top: 20px;
+}
+button{
+  border: 1px solid black;
+  font-weight: bolder;
+  padding: 5px;
+  border-radius: 5px;
+}
+    </style>
   </head>
 
   <body>
-    <div id="app"></div>
+    <div class="container">
 
     <h1>Stock calculator</h1>
     <hr />
     
- Enter  stock price:<input type="text" id="price">
- Enter quantity:<input type="text" id="quantity"> 
- Enter current stock price: <input type="text" id="currentPrice"> <br><br>
+ <strong>Enter  stock price</strong>:<input type="text" id="price"><br>
+ <strong>Enter stock quantity</strong><input type="text" id="quantity"> <br>
+ <strong>Enter current stock price</strong> <input type="text" id="currentPrice"> <br><br>
  <button onclick="getStock();">calculate </button>
  <h2 id="output"></h2>
- <br><br><hr>
+</div>
+ <hr>
 
 
    </body>
