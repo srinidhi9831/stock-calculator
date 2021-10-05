@@ -3,6 +3,7 @@ var quantity=document.querySelector("#quantity");
 var currentPrice=document.querySelector("#currentPrice");
 var output=document.querySelector("#output");
 var button = document.querySelector("#button");
+var body = document.querySelector(".container");
 //console.log(button);
 //console.log(initialPrice);
 
@@ -12,9 +13,7 @@ function eventHandler(){
   
    if(validate(initialPrice,quantity,currentPrice))
       calculateProfitAndLoss(initialPrice,quantity,currentPrice);
-      
-    
-      
+          
 }
 
 
@@ -26,11 +25,13 @@ function calculateProfitAndLoss(initialPrice,quantity,currentPrice){
    var profit=getProfit(costPrice,sellingPrice);
    var profitPercentage= (getProfitPercentage(profit,costPrice));
    show(`profit is ${profit}, profitpercent is ${profitPercentage}%`);
+   body.style.backgroundColor="green";
    }
    else if(costPrice>sellingPrice){
    var loss=getLoss(costPrice,sellingPrice);
    var lossPercentage=getLossPercentage(loss,costPrice);
    show(`loss is ${loss}, losspercentage is ${lossPercentage}%`);
+   body.style.backgroundColor="red";
    }
    else{
     show(`no loss no profit`);
