@@ -65,14 +65,18 @@ function validate(initialPrice,quantity,currentPrice){
 
     if(initialPrice.value==="" || quantity.value==="" || currentPrice.value===""){
             alert("please fill out all fields");
-            return 0;
+            return false;
     }
     else if(isNaN(initialPrice.value) || isNaN(quantity.value) || isNaN(currentPrice.value)){
         console.log(`inside val ${isNaN(initialPrice)}`);
          show("please enter number only");
-         return 0;
+         return false;
         
      }
+     else if(initialPrice.value<0 || quantity.value<0 || currentPrice.value<0 ){
+        alert("please enter numbers greater than zero");
+        return false;
+}
      else
        console.log("validate sucess");
        return true;    
